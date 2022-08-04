@@ -12,3 +12,183 @@
   /* fonts */
   --main-font: "Outfit", sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: inherit;
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--very-dark-blue-card);
+  width: 225px;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 50%;
+  width: 100%;
+}
+
+.card-img-main {
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.card-img-preview {
+  transition: 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 255, 247, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.card-img-container:hover .card-img-preview {
+  opacity: 1;
+}
+
+.card-img-preview img {
+  height: 30px;
+  width: 30px;
+}
+
+.card-info-title {
+  color: var(--white);
+  font-size: 0.8em;
+}
+
+.card-info-sub {
+  font-size: 0.65em;
+  font-weight: 300;
+  color: var(--soft-blue);
+  margin: 10px 0;
+}
+
+.card-info-container {
+  height: 50%;
+  padding: 10px 0;
+}
+
+.card-info-terms {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.card-info-terms-left,
+.card-info-terms-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.65em;
+}
+
+.card-info-terms-left {
+  color: var(--cyan);
+}
+
+.card-info-terms-right {
+  color: var(--soft-blue);
+}
+
+.card-info-terms-left img {
+  height: 15px;
+  width: 10px;
+  margin-right: 5px;
+}
+
+.card-info-terms-right img {
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+hr {
+  background-color: var(--very-dark-blue-line);
+  height: 1px;
+  border: none;
+  outline: none;
+  margin: 15px 0;
+}
+
+.card-info-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-info-author img {
+  height: 20px;
+  width: 20px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.card-info-author p {
+  font-size: 0.65em;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.card-info-author span {
+  color: var(--white);
+}
+
+.card-info-title:hover,
+.card-info-author span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--very-dark-blue-main);
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+
+footer a {
+  color: var(--cyan);
+}
